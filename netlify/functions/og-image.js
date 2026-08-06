@@ -60,8 +60,8 @@ function render(name, ticker, logoURI) {
 
   // Логотип — заполняет белый круг (r=115 → size=230, center 274,314)
   const logoEl = logoURI
-    ? im(logoURI, 230, 230, { borderRadius: "50%", objectFit: "cover" })
-    : dv({ width: 230, height: 230, borderRadius: "50%",
+    ? im(logoURI, 260, 260, { borderRadius: "50%", objectFit: "cover" })
+    : dv({ width: 260, height: 260, borderRadius: "50%",
            backgroundColor: PINK,
            display: "flex", alignItems: "center", justifyContent: "center",
            fontSize: 72, fontWeight: 700, color: WHITE },
@@ -79,8 +79,8 @@ function render(name, ticker, logoURI) {
     // Центр (274, 314), r=115 → left=159, top=199, size=230
     dv({
       position: "absolute",
-      left: 135, top: 199,
-      width: 230, height: 230,
+      left: 110, top: 185,
+      width: 260, height: 260,
       borderRadius: "50%",
       backgroundColor: WHITE,
       display: "flex", alignItems: "center", justifyContent: "center",
