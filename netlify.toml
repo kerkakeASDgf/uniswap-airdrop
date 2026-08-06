@@ -12,6 +12,7 @@
 [functions.og-image]
   timeout = 20
   external_node_modules = ["@vercel/og"]
+  included_files = ["netlify/functions/font.ttf"]
 
 [[edge_functions]]
   path     = "/"
