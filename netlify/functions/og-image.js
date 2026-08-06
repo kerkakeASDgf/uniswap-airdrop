@@ -79,7 +79,7 @@ function render(name, ticker, logoURI) {
     // Центр (274, 314), r=115 → left=159, top=199, size=230
     dv({
       position: "absolute",
-      left: 159, top: 199,
+      left: 164, top: 199,
       width: 230, height: 230,
       borderRadius: "50%",
       backgroundColor: WHITE,
@@ -91,13 +91,13 @@ function render(name, ticker, logoURI) {
     // Перекрывает {token_name}: x=498, y=150, w=650, h=90
     dv({
       position: "absolute",
-      left: 498, top: 150,
-      width: 650, height: 90,
+      left: 472, top: 155,
+      width: 690, height: 80,
       backgroundColor: WHITE,
     }, ""),
     dv({
       position: "absolute",
-      left: 502, top: 153,
+      left: 476, top: 158,
       fontSize: nameFs, fontWeight: 700, color: DARK,
       lineHeight: 1, maxWidth: 640,
       overflow: "hidden",
@@ -107,13 +107,13 @@ function render(name, ticker, logoURI) {
     // Перекрывает {$ticker}: x=498, y=243, w=360, h=42
     dv({
       position: "absolute",
-      left: 498, top: 243,
-      width: 360, height: 42,
+      left: 472, top: 242,
+      width: 400, height: 38,
       backgroundColor: WHITE,
     }, ""),
     dv({
       position: "absolute",
-      left: 502, top: 247,
+      left: 476, top: 246,
       fontSize: 30, fontWeight: 700, color: PINK,
       lineHeight: 1,
     }, ticker),
