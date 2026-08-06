@@ -1,0 +1,28 @@
+[build]
+  publish = "."
+  command = "cd netlify/functions && npm install"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[functions]
+  node_bundler = "esbuild"
+
+[functions.og-image]
+  timeout = 20
+  external_node_modules = ["@vercel/og"]
+
+[[edge_functions]]
+  path     = "/"
+  function = "inject-og-meta"
+
+[[redirects]]
+  from   = "/og-image"
+  to     = "/.netlify/functions/og-image"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"

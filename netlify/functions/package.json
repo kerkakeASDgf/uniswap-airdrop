@@ -1,0 +1,7 @@
+{
+  "name": "og-image-function",
+  "version": "1.0.0",
+  "dependencies": {
+    "@vercel/og": "0.5.11"
+  }
+}
