@@ -79,7 +79,7 @@ function render(name, ticker, logoURI) {
     // Центр (274, 314), r=115 → left=159, top=199, size=230
     dv({
       position: "absolute",
-      left: 164, top: 199,
+      left: 135, top: 199,
       width: 230, height: 230,
       borderRadius: "50%",
       backgroundColor: WHITE,
