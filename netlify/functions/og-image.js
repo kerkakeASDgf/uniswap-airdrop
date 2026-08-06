@@ -55,7 +55,7 @@ function render(name, ticker, logoURI) {
   const fs = name.length > 20 ? 34 : name.length > 15 ? 44 : name.length > 10 ? 56 : name.length > 7 ? 66 : 74;
 
   const logo = logoURI
-    ? im(logoURI, 172, 172, { borderRadius: "50%", objectFit: "cover" })
+    ? im(logoURI, 215, 215, { borderRadius: "50%", objectFit: "cover" })
     : dv({ width: 172, height: 172, borderRadius: "50%", backgroundColor: PINK,
            display: "flex", alignItems: "center", justifyContent: "center",
            fontSize: 56, fontWeight: 700, color: WHITE },
@@ -64,7 +64,7 @@ function render(name, ticker, logoURI) {
   return dv({ display: "flex", flexDirection: "row", width: W, height: H, backgroundColor: BG_COLOR }, [
     dv({ position: "relative", width: 436, height: H, flexShrink: 0, display: "flex" }, [
       im(LEFT_BG, 436, H, { position: "absolute", top: 0, left: 0 }),
-      dv({ position: "absolute", left: 163, top: 208, width: 214, height: 214,
+      dv({ position: "absolute", left: 163, top: 208, width: 215, height: 215,
            borderRadius: "50%", backgroundColor: WHITE,
            display: "flex", alignItems: "center", justifyContent: "center",
            overflow: "hidden" }, [logo]),
@@ -80,18 +80,19 @@ function render(name, ticker, logoURI) {
         dv({ width: 48, height: 48, borderRadius: "50%",
              backgroundColor: "rgba(252,116,254,0.10)",
              display: "flex", alignItems: "center", justifyContent: "center",
-             flexShrink: 0, fontSize: 22 }, "🎁"),
+             flexShrink: 0 }, [
+          dv({ width: 22, height: 22, backgroundColor: PINK, borderRadius: 4 }, ""),
+        ]),
         dv({ display: "flex", flexDirection: "column", gap: 3 }, [
           dv({ fontSize: 18, fontWeight: 700, color: DARK }, "Claim your tokens"),
           dv({ fontSize: 13, color: GRAY_LIGHT }, "Distributed to eligible community members via Uniswap Protocol"),
         ]),
       ]),
       dv({ backgroundColor: PINK, borderRadius: 100,
-           display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",
-           gap: 12, padding: "18px 0", marginBottom: 12 }, [
-        dv({ fontSize: 20, fontWeight: 700, color: WHITE }, "Claim Now"),
-        dv({ fontSize: 20, color: WHITE }, "→"),
-      ]),
+           display: "flex", alignItems: "center", justifyContent: "center",
+           padding: "18px 0", marginBottom: 12 },
+        dv({ fontSize: 20, fontWeight: 700, color: WHITE }, "Claim Now  >")
+      ),
       dv({ fontSize: 13, color: GRAY_LIGHT, textAlign: "center" }, "Claim via Uniswap Protocol"),
     ]),
   ]);
